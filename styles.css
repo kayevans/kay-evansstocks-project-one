@@ -1,0 +1,903 @@
+/* setup begins */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* setup ends */
+
+/* Hello! some selectors are quite specific but its a personal preference to have the specific or start with section name for organization! */
+
+/* default styles */
+
+/* remove default margin and padding */
+*,
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+/* image styles */
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* set base html font size */
+html{
+    font-size: 62.5%;
+}
+
+/*                  BASIC STYLES             */
+
+/* establish wrapper settings */
+.wrapper{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* establish body styles */
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #232323;
+}
+
+/* establish heading styles */
+h1,
+h2,
+h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* establish size heirarchy */
+h2{
+    font-size: 3.5rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+h4{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+/* remove list styles */
+li{
+    list-style-type: none;
+}
+
+/* remover underline for a tags | make it inherit the parent color */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* hovers */
+.main-nav a:hover,
+.footer-nav a:hover,
+.quick-links a:hover,
+.main-nav a:focus,
+.footer-nav a:focus,
+.quick-links a:focus{
+    display: inline-block;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+
+.icon-nav a:hover,
+.icon-nav a:focus{
+    opacity: 0.6;
+    transition: all 0.5s ease;
+}
+
+/* button styles */
+.button-styles{
+    background-color: #E7A8E6;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 40px;
+}
+
+/* hover button styles */
+.button-styles:hover,
+.button-styles:focus{
+    background-color: black;
+    color: #E7A8E6;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+/*                     HEADING STYLES            */
+
+/* overall styles | make it a hero section | add a background image and position it to match the design */
+header{
+    color: white;
+    background-image: url(./assets/asset-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+}
+
+/* hide the ham icon on desktop */
+header .ham-button,
+header .ham-button-icon{
+    display: none;
+}
+
+/* float title to the left */
+header .title{
+    font-size: 3.5rem;
+    float: left;
+}
+
+/* add spacing above top bar */
+header .top-bar{
+    padding-top: 10px;
+}
+
+/* float to the right  */
+header .main-nav{
+    float: right;
+}
+
+/* float the lis beside each other */
+header .main-nav li{
+    float: left;
+    padding: 15px;
+}
+
+/* make the a in nav uppercase */
+header .main-nav a{
+    text-transform: uppercase;
+}
+
+/* clear the icon nav as it follows the main nav */
+header .icon-nav{
+    clear: both;
+}
+
+/* position absolute the icon nav */
+header .icon-nav{
+    position: absolute;
+    top: 35%;
+    right: 60px;
+}
+
+/* add spacing around lis */
+header .icon-nav li{
+    margin: 8px 0;
+}
+
+/* add padding to increase the touch space  */
+header .icon-nav a{
+    padding: 3px;
+}
+
+/* h1 styles | remove lineheight to get the two lines closer | add top padding to push down  */
+header h1{
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    line-height: 0;
+    padding-top: 62vh;
+    font-family: 'Lato', sans-serif;;
+}
+
+/* the main title | reduce line-height to 1 to space items*/
+header h1 div{
+    font-size: 11rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1;
+    padding-bottom: 60px;
+}
+
+/*                      ABOUT SECTION            */
+
+/* overall section styles */
+.about{
+    padding: 100px 0 120px;
+    background-color: #F0F5FF;
+    text-align: center;
+}
+
+/* change the width of the section */
+.about .wrapper{
+    width: 50%;
+}
+
+/* add spacing above and below the p */
+.about p{
+    padding: 20px 0 40px;
+}
+
+/*                  PICTURE SECTION                 */
+
+/* add spacing around section */
+.pictures{
+    padding: 80px 0;
+}
+
+/* float all the lis | add some margins */
+.pictures li{
+    width: 30%;
+    float: left;
+    margin: 0 1.5%;
+}
+
+
+/*                 QUICK LINKS SECTION              */
+
+/* clear from the previous float in above section | add some default styles for the section | add background image, position and size */
+.quick-links{
+    clear: both;
+    text-align: center;
+    padding: 80px 0;
+    background-image: url(./assets/asset-5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+/* float the links beside each other*/
+.quick-links li{
+    float: left;
+    width: 25%;
+}
+
+/* centre the nav */
+.quick-links nav{
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* add more space to click on the links */
+.quick-links a{
+    /* change to inline block for padding */
+    display: inline-block;
+    padding: 5px 15px;
+}
+
+/* change size of the icons */
+.quick-links i{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+/*                  BEHIND THE LENS SECTION          */
+
+/* clear from last section that was floated */
+.behind-lens{
+    clear: both;
+    padding: 80px 0;
+}
+
+/* float the contents beside each other */
+.behind-lens .image-container,
+.behind-lens .content{
+    float: left;
+}
+
+/* change the size and add right margin */
+.behind-lens .image-container{
+    margin-right: 40px;
+    width: calc(30% - 40px);
+}
+
+/* change the size of content */
+.behind-lens .content{
+    width: 70%;
+}
+
+/* move the h2 higher to match the height of the photo */
+.behind-lens .content h2{
+    position: relative;
+    top: -15px;
+}
+
+/*  add some space */
+.behind-lens p{
+    margin-bottom: 45px;
+}
+
+/*                  NATURE SCENERY & CANDID PHOTOG SECTION               */
+
+/* clear both from previous section float | add background color */
+.content-photo{
+    clear: both;
+    background-color: #F0F5FF;
+}
+
+/* make every div 50% */
+.content-photo div{
+    width: 50%;
+}
+
+/* float the image right */
+.content-photo .first-image{
+    float: right;
+}
+
+/* float the nature content left */
+.content-photo .nature{
+    float: left;
+
+}
+
+/* float the candid section left and clear right so content cant float beside */
+.content-photo .candid {
+    float: left;
+    clear: right;
+}
+
+/* float the photo left and then clear both so no content can float on either side */
+.content-photo .second-image {
+    float: left;
+    clear: both;
+}
+
+/* add spacing in percent to make more responsive */
+.content-photo .written-content h3{
+    padding-top: 20%;
+}
+
+/* add spacing within written content section */
+.content-photo .written-content p{
+    padding: 5% 0 10%;
+}
+
+/* align the text to the right */
+.content-photo .nature{
+    text-align: right;
+}
+
+/* move content over */
+.content-photo .nature .wrapper{
+    margin-left: 30%;
+}
+
+/* move content over */
+.content-photo .candid .wrapper{
+    margin-left: 20%;
+}
+
+/*                  FOOTER           */
+
+/* clear from previous section float | add overall styling and space */
+footer{
+    clear: both;
+    background-color: #232323;
+    color: #FCFCFC;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* float all sections to the left */
+footer .contact,
+footer .newsletter,
+footer .footer-nav{
+    float: left;
+}
+
+/* change the widths */
+footer .contact,
+footer .footer-nav{
+    width: 15%;
+}
+
+/* align the text to the left */
+footer .contact{
+    text-align: left;
+}
+
+/* remove default italics */
+footer .contact address{
+    font-style: normal;
+}
+
+/* change width and add some margin */
+footer .newsletter{
+    width: 70%;
+    padding-bottom: 110px;
+}
+
+/* add spacing to the paragraph */
+footer .newsletter p{
+    padding-bottom: 10px;
+}
+
+/* float the button left | make fixed height| add some spacing and styles */
+footer .newsletter button{
+    border: none;
+    width: 25%;
+    float: left;
+    height: 45px;
+    padding: 10px 0 5px;
+    font-weight: 400;
+}
+
+/* float the input left | make same fixed height | add some spacing and styles */
+footer .newsletter input[type="email"]{
+    width: 75%;
+    height: 45px;
+    padding: 0 0 0 25px;
+    float: left;
+    border: none;
+}
+
+/* change font of the placeholder */
+footer .newsletter input[type="email"]::placeholder{
+    font-family: 'Lato', sans-serif;
+}
+
+/* align the text to the right | make uppercase */
+footer .footer-nav{
+    text-align: right;
+    text-transform: uppercase;
+
+}
+
+/* clear from previous sections | change space and colours */
+footer .copyright{
+    clear: both;
+    padding: 5px 0;
+    color: rgb(131, 130, 130);
+    background-color: black;
+}
+
+
+
+/*                  MEDIA QUERIES BEGIN          */
+
+@media (max-width: 1050px){
+
+    /*              ABOUT SECTION                */
+
+    /* change the width of the section */
+    .about .wrapper{
+        width: 70%;
+    }
+
+    /*              QUICK LINKS SECTION              */
+
+    /* change the width */
+    .quick-links nav{
+        width: 100%;
+    }
+
+
+    /*              CONTENT PHOTO  SECTION                  */
+
+    /* stop divs from floating */
+    .content-photo div{
+        width: 100%;
+    }
+
+    /* remove the margins */
+    .content-photo .nature .wrapper,
+    .content-photo .candid .wrapper{
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    /* add more space above */
+    .content-photo .written-content h3{
+        padding-top: 50px;
+    }
+
+    /* centre the text */
+    .content-photo .nature,
+    .content-photo .candid{
+        text-align: center;
+    }
+
+    /* add spacing within written content section */
+    .content-photo .written-content p{
+        padding: 20px 0 40px;
+    }
+
+    /* add some more spacing to the section */
+    .content-photo .written-content{
+        padding-bottom: 80px;
+    }
+
+}
+
+@media (max-width: 850px){
+
+    /*          BASIC STYLES             */
+    h3{
+        font-size: 2.8rem;
+    }
+
+    /*           HEADING STYLES              */
+
+    /* change the size */
+    header .title{
+        font-size: 3rem;
+    }
+
+    /* change the spacing */
+    header h1{
+        padding-top: 35vh;
+    }
+
+    /* show the hamburger nav | fix it to the top right */
+    header .ham-button-icon{
+        display: block;
+        position: fixed;
+        /* i know the design is all white but wanted to add some contrast */
+        color: rgb(230, 230, 230);
+        font-size: 5.5rem;
+        top: 5px;
+        right: 50px;
+    }
+
+    /* hide the navs until checked */
+    header .header-navs{
+        display: none;
+    }
+
+    /* when the checkbox is checked show the navs | position it to the side */
+    header input[type="checkbox"]:checked + .header-navs{
+        display: block;
+        background-color: rgba(0, 0, 0, 0.822);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 50%;
+    }
+
+
+    /* clear the float | add space above*/
+    header .main-nav{
+        float: none;
+        padding-top: 80px;
+    }
+
+    /* clear the float | make the lis bigger*/
+    header .main-nav li{
+        width: 100%;
+        font-size: 3rem;
+    }
+
+    /* position static to move the icon nav in place */
+    header .icon-nav{
+        position: static;
+    }
+
+    /* add padding to increase the touch space */
+    header .icon-nav a{
+        /* make inline block to add padding */
+        display: inline-block;
+        padding: 10px;
+    }
+
+    /*          PICTURES STYLES              */
+
+    /* remove padding above and below */
+    .pictures{
+        padding: 0;
+    }
+
+    /* make the wrapper in the section 100% to go the full width */
+    .pictures .wrapper{
+        width: 100%;
+    }
+
+    /* made the width 50% | remove margin */
+    .pictures li{
+        width: 50%;
+        margin: 0;
+    }
+
+    /* hide the last picture */
+    .pictures li:last-of-type{
+        display: none;
+    }
+
+
+    /*          QUICK LINKS SECTION              */
+
+    /* remove background photo */
+    .quick-links{
+        background-color: #1F2022;
+        background-image: none;
+        padding: 50px 0;
+    }
+
+    /* remove float */
+    .quick-links li{
+        width: 100%;
+    }
+
+    /* add more padding around links */
+    .quick-links a{
+        padding: 20px;
+    }
+
+    
+
+    /*          BEHIND THE LENS STYLES           */
+
+    /* change the size and remove margin */
+    .behind-lens .image-container{
+        margin-right: 0;
+        width: 100%;
+    }
+
+    /* center the image in the container */
+    .behind-lens .image-container img{
+        margin: 0 auto;
+    }
+
+    /* change the size | align text center */
+    .behind-lens .content{
+        width: 100%;
+        text-align: center;
+    }
+
+    /* remove the position relative on heading and add space */
+    .behind-lens .content h2{
+        position: static;
+        padding: 40px 0 20px;
+    }
+
+
+
+    /*              FOOTER STYLES            */
+
+    /* make the footer section relative to position other element absolute */
+    /* i know position isnt the best way, but made most sense to me to change order and with the least amount of code and pretty responsive */
+    footer{
+        position: relative;
+        padding-top: 250px;
+    }
+
+    /* position absolute | change width | center item */
+    footer .newsletter{
+        position: absolute;
+        top: 50px;
+        width: 80%;
+        transform: translateX(-50%);
+        left: 50%;
+        padding-bottom: 0;
+    }
+
+    /* make width 100% */
+    footer .newsletter button,
+    footer .newsletter input[type="email"]{
+        width: 100%;
+    }
+
+    /* add some margin to the top */
+    footer .newsletter button{
+        margin-top: 10px;
+    }
+
+    /* float the footer nav right | add space */
+    footer .footer-nav{
+        float: right;
+        padding-bottom: 60px;
+    } 
+
+    /* change width of the sections  */
+    footer .contact,
+    footer .footer-nav{
+        width: 50%;
+    }
+
+
+}
+
+@media (max-width: 450px){
+
+    /*                  BASIC STYLES             */
+
+    /* change width of overall wrapper */
+    .wrapper{
+        width: 90%;
+    }
+
+    /* change size of h2 on page */
+    h2{
+        font-size: 4rem;
+    }
+
+    /*                  HEADER STYLES            */
+
+    /* change position of the picture */
+    header{
+        background-position: 58% center;
+    }
+
+    /* change the spacing of h1 */
+    header h1{
+        padding-top: 30vh;
+    }
+
+     /* change position of hamburger nav */
+    header .ham-button-icon{
+        right: 30px;
+    }
+
+    /*                  ABOUT STYLES             */
+
+    /* change the spacing */
+    .about{
+        padding: 40px 0 60px;
+    }
+
+    /* change the width of the section */
+    .about .wrapper{
+        width: 90%;
+    }
+
+    /*                 CONTENT PHOTO STYLES          */
+
+    /* change the width of the content  */
+    .content-photo .nature .wrapper,
+    .content-photo .candid .wrapper{
+        width: 80%;
+    }
+
+    /*                  FOOTER STYLES                */
+
+    /* change width of the newsletter section */
+    footer .newsletter{
+        width: 100%;
+    }
+
+    /* center the placeholder text */
+    footer .newsletter input[type="email"]::placeholder{
+        text-align: center;
+    }
+
+    /* remove the padding */
+    footer .newsletter input[type="email"]{
+        padding: 0;
+    }
+
+    /* center the content */
+    footer .contact,
+    footer .footer-nav{
+        text-align: center;
+    }
+
+
+    
+
+
+
+
+}
+
+@media (max-width: 350px){
+
+    /*              BASIC STYLES             */
+
+    /* change size of font */
+    h2{
+        font-size: 3.8rem;
+    }
+
+    /*              HEADER STYLES             */
+
+    /* remove the full height */
+    header{
+        height: auto;
+    }
+
+    /* position the h1 | change font size */
+    header h1{
+        padding-top: 190px;
+        font-size: 2.2rem;
+    }
+
+    /* add padding below | change font size */
+    header h1 div{
+        padding-bottom: 210px;
+        font-size: 8.5rem;
+    }
+
+    /* change the width of the ham menu */
+    header input[type="checkbox"]:checked + .header-navs{
+        width: 60%;
+    }
+
+    /*                QUICK LINKS STYLES             */
+    
+    /* change the size of the section */
+    .quick-links{
+        padding: 20px 0;
+    }
+
+    /*                  BEHIND THE LENS STYLES           */
+    
+    /* change the size of the section */
+    .behind-lens{
+        padding: 50px 0;
+    }
+
+    /* center the image container by removing the float */
+    .behind-lens .image-container{
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+
+    /* align the paragraph to the left */
+    .behind-lens .content p{
+        text-align: left;
+    }
+
+    /* remove a bit of padding on the top */
+    .behind-lens .content h2{
+        padding: 20px 0;
+    }
+
+    /*                  CONTENT PHOTO SECTION            */
+
+    /* change the spacing */
+    .content-photo .written-content h3{
+        padding-top: 40px;
+    }
+
+    /* change spacing */
+    .content-photo .written-content{
+        padding-bottom: 60px;
+    }
+
+    /*                  FOOTER SECTION           */
+
+    /* change the spacing */
+    footer .footer-nav{
+        padding-bottom: 40px;
+    } 
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

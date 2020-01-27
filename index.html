@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- my font awesome link -->
+    <script src="https://kit.fontawesome.com/490d4ebda7.js" crossorigin="anonymous"></script>
+    <!-- my google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700|Playfair+Display:400,700&display=swap" rel="stylesheet"> 
+    <!-- my CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Shutter | Project 1</title>
+</head>
+<body>
+    <!-- header begins -->
+    <header>
+        <!-- wrapper begins -->
+        <div class="wrapper">
+            <!-- put the navs and title into a div to style -->
+            <div class="top-bar clearfix">
+                <h2 class="title"><a href="">Shutter</a></h2>
+
+                <!-- the hamburger menu | add sr only for accessibility -->
+                <label class="ham-button-icon" for="res-nav"><span class="sr-only">Click for navigation menu</span><i aria-hidden="true" class="fas fa-bars" title="Click for navigation menu"></i></label>
+                <input class="ham-button" type="checkbox" name="res-nav" id="res-nav">
+
+                <!-- put the two navigations into div for hamburger navigation -->
+                <div class="header-navs">
+                    <!-- main navigation -->
+                    <nav>
+                        <ul class="main-nav clearfix">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- icon navigation -->
+                    <nav>
+                        <ul class="icon-nav clearfix">
+                            <li>
+                                <a aria-label="Go to Facebook page" href="#"><i aria-hidden="true" title="Go to Facebook page" class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a aria-label="Go to instagram page" href="#"><i aria-hidden="true" title="Go to Instagram page" class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a aria-label="Go to Linkedin page" href="#"><i aria-hidden="true" title="Go to LinkedIn page" class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li>
+                                <a aria-label="Go to Twitter page" href="#"><i aria-hidden="true" title="Go to Twitter page" class="fab fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- put the shutter in a seperate div to seperate and style -->
+            <h1>Welcome to<div>Shutter</div></h1>
+        </div>
+        <!-- wrapper ends -->
+    </header>
+    <!-- header ends -->
+
+    <!-- main begins -->
+    <main>
+        <!-- about section begins -->
+        <section class="about">
+            <!-- wrapper begins -->
+            <div class="wrapper">
+                <h2>About Shutter</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, repudiandae voluptates laborum tempore totam vel nemo aut, vitae dolorum minus impedit autem nobis, ducimus odit voluptatibus quae inventore corrupti maiores.</p>
+                <a class="button-styles" href="#">Find out more</a>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- about section ends -->
+
+        <!-- picture section begins -->
+        <section class="pictures">
+            <!-- wrapper begins -->
+            <div class="wrapper">
+                <ul class="clearfix">
+                    <li>
+                        <div class="image-container">
+                            <img src="./assets/asset-2.jpg" alt="Two palm trees with a purple and pink sunset in the back">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-container">
+                            <img src="./assets/asset-3.jpg" alt="Hand holding a jar with string lights inside">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-container">
+                            <img src="./assets/asset-4.jpg" alt="A busy city street with cars stopped at a light">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- picture section ends -->
+
+        <!-- quick link section begins -->
+        <section class="quick-links">
+            <!-- wrapper begins -->
+            <div class="wrapper">
+                <nav>
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#" aria-label="Visit the gallery page">
+                                <i aria-hidden="true" title="Visit the gallery page" class="fas fa-images"></i>
+                                <h3>Gallery</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Visit the photo tip page" >
+                                <i aria-hidden="true" title="Visit the photo tips page" class="fas fa-camera"></i><h3>Photo Tips</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label="Visit the about page" href="#">
+                                <i aria-hidden="true" title="Visit the about page" class="fas fa-image"></i>
+                                <h3>About</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label="Visit the contact page" href="#">
+                                <i aria-hidden="true" title="Visit the contact page" class="fas fa-envelope"></i>
+                                <h3>Contact</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- quick link section ends -->
+
+        <!-- behind the lens section begins -->
+        <section class="behind-lens">
+            <!-- wrapper begins -->
+            <div class="wrapper clearfix">
+                <div class="image-container">
+                    <img src="./assets/asset-6.jpg" alt="Feminine presenting person with camera up to their eye in front of pink wall">
+                </div>
+                <div class="content">
+                    <h2>Behind the Lens</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, est. Sint amet suscipit animi rerum quisquam debitis? Molestias, praesentium assumenda ipsa, eveniet fugit voluptatum quae iure sequi necessitatibus similique quaerat rerum fugiat nisi vero rem. Quas ex facilis ratione dolores assumenda animi temporibus. Laudantium tempore distinctio iste quae, quibusdam perferendis ipsam eum magni? At optio culpa, impedit ab ut labore!</p>
+                    <a class="button-styles" href="#">Find out more</a>
+                </div>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- behind the lens section ends -->
+
+        <!-- content photo section begins -->
+        <section class="content-photo clearfix">
+            <div class="image-container first-image">
+                <img src="./assets/asset-7.jpg" alt="Rock cliff in big body of water with purple tint">
+            </div>
+            <div class="nature written-content">
+                <div class="wrapper">
+                    <h3>Nature & Scenery</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda accusantium temporibus accusamus a blanditiis rem facere. Culpa suscipit voluptatibus soluta.</p>
+                    <a class="button-styles" href="#">Read more</a>
+                </div>
+            </div>
+            <div class="image-container second-image">
+                <img src="./assets/asset-8.jpg" alt="Back view of feminine presenting person on the beach">
+            </div>
+            <div class="candid written-content">
+                <div class="wrapper">
+                    <h3>Candid Photography</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda accusantium temporibus accusamus a blanditiis rem facere. Culpa suscipit voluptatibus soluta.</p>
+                    <a class="button-styles" href="#">Read more</a>
+                </div>
+            </div>
+        </section>
+        <!-- content photo section ends -->
+
+    </main>
+    <!-- main ends -->
+
+    <!-- footer begins -->
+    <footer>
+        <!-- wrapper begins -->
+        <div class="wrapper clearfix">
+            <!-- contact section begins -->
+            <section class="contact">
+                <h4>Contact</h4>
+                <address>
+                    <a href="mailto:info@email.com">info@email.com</a>
+                    <a href="tel:1234567890">123-456-7890</a>
+                    <p>123 some road, Toronto, ON</p> 
+                </address>
+            </section>
+            <!-- contact section ends -->
+
+            <!-- newsletter section begins -->
+            <section class="newsletter">
+                <h4>Stay updated</h4>
+                <p>Subscribe to our newsletter to stay updated.</p>
+                <form class="clearfix" action="">
+                        <div class="wrapper">
+                            <input type="email" name="email-input" id="email-input" placeholder="email address">
+                            <label class="visuallyHidden" for="email-input">Please enter an email:</label>
+                            <button class="button-styles" type="submit">Subscribe</button>
+                        </div>
+                </form>
+            </section>
+            <!-- newsletter section ends -->
+
+            <!-- footer nav section begins -->
+            <section class="footer-nav">
+                <h4>Pages</h4>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <!-- footer nav section ends -->
+
+        </div>
+        <!-- wrapper ends -->
+
+        <!-- copyright section begins | outside of wrapper -->
+        <section class="copyright">
+            <!-- wrapper begins -->
+            <div class="wrapper">
+                <p>Copyright &copy; 2018 HackerYou</p>
+            </div>
+            <!-- wrapper ends -->
+        </section>
+        <!-- copyright section ends -->
+
+    </footer>
+    <!-- footer ends -->
+    
+</body>
+</html>
